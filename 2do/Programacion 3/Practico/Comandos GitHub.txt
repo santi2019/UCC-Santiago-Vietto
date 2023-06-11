@@ -1,0 +1,23 @@
+Repaso Github:
+
+Github: es una solucion que me permite hacer versionamiento de codigo (tener distintas 
+versiones de mi programa), permite automatizar el trabajo de saber quien, que y por que motivo 
+cambio tal codigo, etc.
+
+Repositorio: un repositorio o repo es un directorio donde se almacenan los archivos de tu 
+proyecto. Puede estar ubicado en el almacenamiento de GitHub o en un repositorio local en tu 
+computadora. Se puede almacenar archivos de código, imágenes, audios o todo lo relacionado con 
+el proyecto en el repositorio. Existen dos tipos, publicos y privados.
+
+Para clonar archivo:
+git config --global user.name "santi2019"
+git config --global user.email "santiagovietto5@hotmail.com"
+git config --list
+git clone (antes accedo a la carptea donde quireo que se clone el archivo y a coninuacion pego la url)
+
+Para subir archivo:
+git status (para ver archivos modificados)
+git add .
+git commit –m “…”
+git push
+git pull (verificar si esta actualizado)

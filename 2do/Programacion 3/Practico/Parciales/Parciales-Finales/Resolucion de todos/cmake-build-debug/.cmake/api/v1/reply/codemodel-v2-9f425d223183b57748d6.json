@@ -1,0 +1,519 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						43,
+						44,
+						45,
+						46,
+						47,
+						48,
+						49,
+						50,
+						51
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Plantilla",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						43,
+						44,
+						45,
+						46,
+						47,
+						48,
+						49,
+						50,
+						51
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Arbol1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Arbol1-Debug-052a18c468eed9f7cddb.json",
+					"name" : "Arbol1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Arbol2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Arbol2-Debug-3c5dbdd08858a8395dd4.json",
+					"name" : "Arbol2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Arbol3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Arbol3-Debug-dec338573b3b7ab91336.json",
+					"name" : "Arbol3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Arbol4::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Arbol4-Debug-7a82fc2047553939add5.json",
+					"name" : "Arbol4",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Cola1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Cola1-Debug-e742671ca436ec56e7e8.json",
+					"name" : "Cola1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Cola2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Cola2-Debug-cf66c1bf8f18a893b038.json",
+					"name" : "Cola2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Cola3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Cola3-Debug-24b30e63baa6a9c3396c.json",
+					"name" : "Cola3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Cola4::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Cola4-Debug-21bb41bc5972733d607a.json",
+					"name" : "Cola4",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ej1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ej1-Debug-2939443f982bee717181.json",
+					"name" : "Ej1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ej10::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ej10-Debug-f21f5c7b098f04b84f90.json",
+					"name" : "Ej10",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ej11::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ej11-Debug-ae094156bf84a6f9c58e.json",
+					"name" : "Ej11",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ej12::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ej12-Debug-9806af4c36dd8c31c46b.json",
+					"name" : "Ej12",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ej13::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ej13-Debug-6d273c2fa2a453012bbc.json",
+					"name" : "Ej13",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ej14::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ej14-Debug-c0d545667e03b78e06f5.json",
+					"name" : "Ej14",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ej15::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ej15-Debug-ba49b8d8273a9acb330d.json",
+					"name" : "Ej15",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ej16::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ej16-Debug-8bcfcae3b9b4d16b0403.json",
+					"name" : "Ej16",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ej17::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ej17-Debug-b1691f90aceff43346b7.json",
+					"name" : "Ej17",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ej18::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ej18-Debug-9fd356c36874db642c49.json",
+					"name" : "Ej18",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ej19::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ej19-Debug-10fc3cd4f07ddde154a3.json",
+					"name" : "Ej19",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ej2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ej2-Debug-e70e098bd225afa9ccee.json",
+					"name" : "Ej2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ej20::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ej20-Debug-ab9dce30bbcd6ff7c976.json",
+					"name" : "Ej20",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ej21::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ej21-Debug-3ef72eb0fd20051925b9.json",
+					"name" : "Ej21",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ej22::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ej22-Debug-d85dd184cca6dde14ff9.json",
+					"name" : "Ej22",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ej23::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ej23-Debug-56907cfcd28f6faf752f.json",
+					"name" : "Ej23",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ej24::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ej24-Debug-e2d845297e7ade5c9168.json",
+					"name" : "Ej24",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ej25::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ej25-Debug-949ecf9b2f2a630cbd7e.json",
+					"name" : "Ej25",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ej3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ej3-Debug-e14fb3813afeddfa7364.json",
+					"name" : "Ej3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ej4::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ej4-Debug-2f99ad848e709845a1c2.json",
+					"name" : "Ej4",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ej5::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ej5-Debug-00a2d8339f4e559ee9d2.json",
+					"name" : "Ej5",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ej6::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ej6-Debug-f6bfe8b5534c7548d5db.json",
+					"name" : "Ej6",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ej7::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ej7-Debug-248791aaea313a266e77.json",
+					"name" : "Ej7",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ej8::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ej8-Debug-d8cc6275d6c67a451ea9.json",
+					"name" : "Ej8",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ej9::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ej9-Debug-9f2620a3c5ab404844c9.json",
+					"name" : "Ej9",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Lista1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Lista1-Debug-a6106f3ad77306d5a62b.json",
+					"name" : "Lista1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Lista2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Lista2-Debug-18928b5ba6ed685c7819.json",
+					"name" : "Lista2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Lista3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Lista3-Debug-eae788fc58fcba3e06c6.json",
+					"name" : "Lista3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Lista4::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Lista4-Debug-254e9a3eb669d8e17595.json",
+					"name" : "Lista4",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Lista5::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Lista5-Debug-56546b01f118f219c592.json",
+					"name" : "Lista5",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Lista6::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Lista6-Debug-852280fe4b1bb57c6bcf.json",
+					"name" : "Lista6",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Pila1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Pila1-Debug-763df69d13d1aa56f82b.json",
+					"name" : "Pila1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Pila2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Pila2-Debug-597d7cecbc03e70c487b.json",
+					"name" : "Pila2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Pila3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Pila3-Debug-9e0576ffd7964cb13d13.json",
+					"name" : "Pila3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Pila4::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Pila4-Debug-0de36e9079e5e3900ab9.json",
+					"name" : "Pila4",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Pila5::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Pila5-Debug-0c9a1c146072a7157a4f.json",
+					"name" : "Pila5",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Pila6::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Pila6-Debug-31de6859f208b7e01810.json",
+					"name" : "Pila6",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Recursividad1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Recursividad1-Debug-d312064356fc499bd78b.json",
+					"name" : "Recursividad1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Recursividad2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Recursividad2-Debug-b509f09434bc8c81e806.json",
+					"name" : "Recursividad2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Recursividad3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Recursividad3-Debug-ef73a1bbd0f027ce8fc0.json",
+					"name" : "Recursividad3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Recursividad4::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Recursividad4-Debug-5801adb7c84212ef19f3.json",
+					"name" : "Recursividad4",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Recursividad5::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Recursividad5-Debug-6d781d7b5a53ba35601d.json",
+					"name" : "Recursividad5",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Recursividad6::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Recursividad6-Debug-51d0a587dd7c775e8cc3.json",
+					"name" : "Recursividad6",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Recursividad7::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Recursividad7-Debug-64590a782d5759106a39.json",
+					"name" : "Recursividad7",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Santiago/Documentos/UCC-Santi/2do/Programacion 3/Ejercicios/cmake-build-debug",
+		"source" : "D:/Santiago/Documentos/UCC-Santi/2do/Programacion 3/Ejercicios"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
