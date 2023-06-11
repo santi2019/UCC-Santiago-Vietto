@@ -10,14 +10,14 @@ computadora. Se puede almacenar archivos de código, imágenes, audios o todo lo
 el proyecto en el repositorio. Existen dos tipos, publicos y privados.
 
 Para clonar archivo:
-git config --global user.name "santi2019"
-git config --global user.email "santiagovietto5@hotmail.com"
+git config --global user.name "nombre_usuario"
+git config --global user.email "email_usuario"
 git config --list
 git clone (antes accedo a la carptea donde quireo que se clone el archivo y a coninuacion pego la url)
 
 Para subir archivo:
 git status (para ver archivos modificados)
 git add .
-git commit –m “…”
+git commit –m "comentario"
 git push
 git pull (verificar si esta actualizado)
