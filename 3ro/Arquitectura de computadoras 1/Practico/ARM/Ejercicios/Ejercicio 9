@@ -1,0 +1,47 @@
+		;		Escriba una subrutina que se invoque con BL strcmp la cual debe ser capaz de comparar
+		;		dos cadenas de caracteres y determinar si son idénticas. Las cadenas se hallan en memoria,
+		;		están apuntadas por los registros r1 y r2, y finalizan con el carácter nulo (0x00).
+		;		Este procedimiento retornará r3 con 0xFFFFFFFF en caso de igualdad o 0x00000000 en el
+		;		supuesto de que las cadenas sean distintas.
+		
+		
+		;		En este caso realizamos este ejercicio para que cumpla con el procedimiento estandar de
+		;		intercambio de parametros entre las funciones, y es el procedimiento estandar el que nos oblia a
+		;		que los valores de retorno vuelvan en R0. El enunciado en ningun momento dice que debe
+		;		cumplir con el estandar, es por eso que cuando dice R3, no esta mal. Entonces el valor
+		;		de retorno de las funciones se espera que sean en R0, por ende reemplazamos R3. Asi como
+		;		tambien a los registros R1 y R2 los cambiamos por R0 y R1 porque tiene que seguir el orden
+		;		de los registros no preservados para los registros que reciben argumentos.
+		
+main
+		MOV		R0, #cadena1     ; Direccion base de cadena1
+		MOV		R1, #cadena2     ; Direccion base de cadena2
+		MOV		sp, #pilaptr     ; Puntero a la pila
+		BL		strcmp           ; Invocacion a la subrutina
+		END
+		
+strcmp
+		STMFD	SP!, {R4, R5, R6}    ; Salvamos en memoria solo los registros que vamos a usar (push), porque
+		;		se deben preservar.
+		MOV		R6, #0               ; Colocamos en R6 un 0 para usarlo de contador para el indexado.
+		
+loop								 ; Ingresamos al bucle, que seria parte de la funcion.
+		LDRB		R4, [R0, R6]		 ; En el registro R4 agregamos los elementos del arreglo que estan en R0 y guarda el indice que le corresponde a cada elemento, que estaria en R6.
+		LDRB		R5, [R1, R6]         ; En el registro R5 agregamos los elementos del arreglo que estan en R1 y guarda el indice que le corresponde a cada elemento, que estaria en R6.
+		CMP		R4, R5		      ; Comparamos el contenido de ambos registros.
+		MOVNE	R0, #0			 ; En el caso de que no sean iguales, el registro R0 retorna 0x00000000
+		BNE		skip				 ; Vamos hasta la direccion base skip
+		CMP		R4, #0			 ; Ahora, en el caso de que sean iguales, comparamos si R4 o R5 son 0, es decir, que estamos en la ultima palabra, y como son iguales los dos son 0 y terminaron
+		MOVEQ	R0, #0xFFFFFFFF	 ; Entonces establecemos en R0 0xFFFFFFFF para aclarar que terminaron las cadenas y que son iguales
+		ADD		R6, R6, #1		 ; Pero si los elementos de la cadena en la posicion actual no son ambos 0, se incrementa el contador para ir al siguiente indice y asi acceder al siguiente elemento a comparar.
+		BNE		loop				 ; y repetimos el loop.
+		
+skip
+		LDMFD	SP!, {R4, R5, R6}    ; Volvemos a cargar lo que estaba en los registros que salvamos antes (pop).
+		MOV		PC, LR			 ; Y por ultimo volvemos al END.
+		
+cadena1	DCB		72,79,7,65,0
+cadena2	DCB		72,79,76,65,0
+		
+pila		FILL		40
+pilaptr	DCD		1

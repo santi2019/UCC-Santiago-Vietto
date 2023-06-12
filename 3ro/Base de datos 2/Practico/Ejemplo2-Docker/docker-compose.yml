@@ -1,0 +1,89 @@
+version: '3.7'
+services:
+  mysql57:
+    image: mysql:5.7.32
+    container_name: mysql57
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=reed
+      - MYSQL_PASSWORD=reed123
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - ~/infra/mysql57/conf:/etc/mysql/conf.d
+      - ~/infra/mysql57/data:/var/lib/mysql
+    networks:
+      mired:
+        ipv4_address: 172.18.1.2
+  mysql8:
+    image: mysql:8.0.22
+    container_name: mysql8
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=reed
+      - MYSQL_PASSWORD=reed123
+    ports:
+      - '13306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - ~/infra/mysql8/conf:/etc/mysql/conf.d
+      - ~/infra/mysql8/data:/var/lib/mysql
+    networks:
+      mired:
+        ipv4_address: 172.18.1.3
+  nodered1:
+    image: nodered/node-red
+    container_name: nodered1
+    restart: always
+    privileged: true
+    ports:
+      - '1880:1880'
+    expose:
+      - '1880'
+    volumes:
+      - /dev:/dev
+      - ~/infra/node-red-data1:/data    
+    networks:
+      mired:
+        ipv4_address: 172.18.1.4
+  nodered2:
+    image: nodered/node-red
+    container_name: nodered2
+    restart: always
+    privileged: true
+    ports:
+      - '11880:1880'
+    expose:
+      - '1880'
+    volumes:
+      - /dev:/dev
+      - ~/infra/node-red-data2:/data    
+    networks:
+      mired:
+        ipv4_address: 172.18.1.5
+  mosquitto:
+    image: eclipse-mosquitto:latest
+    container_name: mosquitto
+    restart: always
+    ports:
+      - '1883:1883'
+      - '9001:9001'
+    expose:
+      - '1883'
+      - '9001'
+    volumes:
+       - ~/infra/mosquitto/config:/mosquitto/config 
+    networks:
+      mired:
+        ipv4_address: 172.18.1.6
+networks:
+  mired:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.18.1.0/24

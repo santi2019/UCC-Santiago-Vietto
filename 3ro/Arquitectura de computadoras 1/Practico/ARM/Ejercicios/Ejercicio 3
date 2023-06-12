@@ -1,0 +1,13 @@
+; La instrucción NOR no es parte del conjunto de instrucciones ARM, porque la misma funcionalidad puede implementarse utilizando las instrucciones existentes.
+; Escriba un breve fragmento de código Assembly que tenga la siguiente funcionalidad: R0 = R1 NOR R2. Use la menor cantidad de instrucciones posible.
+		
+		
+	mov		R1, #0b1010
+	mov		R2, #0b0100
+	
+	
+	; La solucion al problema son las siguientes instrucciones, ya que las anteriores son solo para setear parametros
+	
+	ORR		R0, R1, R2     ; Hacemos la operacion OR
+	MVN		R0, R0		; Hacemos la negacion de la OR ya que seria la NOR
+						; No hace falta inicializar R0 en 0 ya que cuando hacemos la operacion anterior se va a sobreescribir dicho 0

@@ -1,0 +1,12 @@
+		;		Usar un fragmento de código en lenguaje Assembly del ARM para implementar la ecuación 7x - 1
+		;		dejando el resultado en R2. Asuma que x está en R3.
+		
+		
+		
+		MOV		R3, #2
+		
+		RSB		R1, R3, R3, LSL #3
+		SUB		R2, R1, #1
+		
+		
+		

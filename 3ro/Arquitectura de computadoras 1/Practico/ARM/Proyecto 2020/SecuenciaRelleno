@@ -1,0 +1,43 @@
+				BL		Relleno
+				end
+Relleno
+				STMFD	SP!, {r4,r5,lr}
+				MOV		r4,#0
+				MOV		r5,#array
+				
+for
+				LDRB		r0,[r5,r4]
+				
+				BL		mostrarEnBinario
+				ADD		r4,r4,#1
+				CMP		r4,#7
+				BLT		for
+				LDMFD	SP!, {r4,r5,lr}
+				MOV		pc,lr
+				
+				
+array			DCB		0x81, 0xC3, 0xE7, 0xFF, 0xFF, 0xE7, 0xC3   ;tabla
+				
+				
+mostrarEnBinario
+				
+				STMFD	SP!, {r5,r6,lr}
+				MOV		r6,#128
+				MOV		r5,r0
+				
+for1
+				TST		r5,r6
+				MOVEQ	r0,#0
+				MOVNE	r0,#1
+				;cout
+				LSR		r6,r6,#1
+				CMP		r6,#0
+				BGT		for1
+				LDMFD	SP!, {r5,r6,lr}
+				MOV		pc,lr
+				
+				
+				
+				
+				
+				

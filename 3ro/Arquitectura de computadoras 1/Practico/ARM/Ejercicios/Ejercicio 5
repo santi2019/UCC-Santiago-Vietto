@@ -1,0 +1,9 @@
+		;		Sin usar la instrucción MUL, escriba dos instrucciones que multipliquen al registro r4 por 35 y almacene el resultado en r10.
+		
+		MOV		R8,  #0x1
+		mov		r4, #0x5
+		
+		RSB		R10, R4, R4, lsl #0X3
+		
+		;ADD		R4, R8, R8, LSL  #0X2         ; R4 = R4*5
+		;RSB		R10, R4, R4, LSL  #0x3        ; R10 = R4*7

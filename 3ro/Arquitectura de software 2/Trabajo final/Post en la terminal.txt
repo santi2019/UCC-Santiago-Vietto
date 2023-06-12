@@ -1,0 +1,3 @@
+# hacer un post en la terminal
+
+> curl -X POST http://localhost:8080/service/pelicula -H 'Content-Type: application/json' -d '{"titulo":"TITULO","sinopsis":"SINOPSIS", "anio":"2020", "genero":"COMEDIA"}'

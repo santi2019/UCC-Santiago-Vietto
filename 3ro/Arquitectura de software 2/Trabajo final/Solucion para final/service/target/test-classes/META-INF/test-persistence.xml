@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
+	
+	<persistence-unit name="ar.edu.ucc.base" transaction-type="RESOURCE_LOCAL">
+	
+		<description>
+            Persistence unit for local mysql.
+        </description>
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        
+        <!-- En este Bloque se agregan las clases del modelo que mapeamos -->
+        <class>edu.ucc.arqSoft.service.model.Alquiler</class>
+        <class>edu.ucc.arqSoft.service.model.Pelicula</class>
+        <class>edu.ucc.arqSoft.service.model.Socio</class>
+        
+        <properties>
+        
+       		<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+       		
+       		<!--- CONFIGURACION BASE DA DATOS, USER Y PWD -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/UCC" />
+            <property name="javax.persistence.jdbc.user" value="ucc" />
+            <property name="javax.persistence.jdbc.password" value="2-Uccwrite" />
+            <!---  -->
+            
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="false"/>
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+     
+        </properties>
+	
+	</persistence-unit>
+</persistence>

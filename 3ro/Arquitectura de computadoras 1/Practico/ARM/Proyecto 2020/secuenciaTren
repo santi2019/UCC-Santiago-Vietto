@@ -1,0 +1,46 @@
+				BL		Tren
+				end
+Tren
+				
+				STMFD	SP!, {r4,r5,lr}
+				MOV		r4,#0
+				MOV		r5,#0x3F
+for1
+				LSL		r5,r5,#1
+				ADD		r4,r4,#1
+				MOV		r0,r5
+				BL		mostrarEnBinario
+				CMP		r4,#10
+				BNE		for1
+				
+				
+				
+				MOV		r4,#0
+				MOV		r5,#0xFC
+for2
+				LSR		r5,r5,#1
+				ADD		r4,r4,#1
+				MOV		r0,r5
+				BL		mostrarEnBinario
+				CMP		r4,#10
+				BNE		for2
+				LDMFD	SP!,{r4,r5,lr}
+				MOV		pc,lr
+				
+				
+mostrarEnBinario
+				
+				STMFD	SP!, {r5,r6,lr}
+				MOV		r6,#128
+				MOV		r5,r0
+				
+for
+				TST		r5,r6
+				MOVEQ	r0,#0
+				MOVNE	r0,#1
+				;cout
+				LSR		r6,r6,#1
+				CMP		r6,#0
+				BGT		for
+				LDMFD	SP!, {r5,r6,lr}
+				MOV		pc,lr

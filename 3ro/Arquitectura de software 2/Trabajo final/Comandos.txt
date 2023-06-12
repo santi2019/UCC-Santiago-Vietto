@@ -1,0 +1,8 @@
+Comando para prender y apagar un sensor:
+
+curl -X PUT -H "Content-Type: application/json"  http://localhost:8080/service/sensor/update/1
+
+
+Comando para crear un registro nuevo:
+
+curl -i -H 'Content-Type: application/json' -X POST -d '{"temperature":32, "pressure":2.3, "wind":12, "timestamp":"2019-05-01T17:00:00.000+0000", "sensor_id":3}' http://localhost:8080/service/register

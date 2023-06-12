@@ -1,0 +1,50 @@
+		;		Escriba en código assembly del ARM una subrutina que debe detectar la presencia del número 42 dentro de una tabla de 250 elementos de tipo byte
+		;		sin signo cuya dirección de comienzo se especifica en el Registro R0. La subrutina debe retornar en R3 el número índice de la primera posición
+		;		de la tabla que contiene el número 42. Si ninguna posición de la tabla contiene el 42, entonces R3 debe retornar el valor -1.
+		
+		
+		;		mov		R0, #tabla
+		;		mov		R1, #0
+		;		mov		R2, #250
+		;		bl		bucle
+		
+		;		mov		R0, R0 ; ficticia para stop
+		
+		;bucle	ldrb		R3, [R0, R1]
+		;		cmp		R3, #42
+		;		beq		done
+		;		add		R1, R1, #1
+		;		subs		R2, R2, #1
+		;		bne		bucle
+		;done	cmp		R2, #0
+		;		moveq	R3, #-1
+		;		movne	R3, R1
+		;		mov		pc, lr
+		
+		;tabla	DCB		1,2,3,4,5,6,7,8,9,10
+		;		fill		240
+		;		end
+		
+		
+		mov		R0, #tabla   ; Usamos el nombre "tabla" como direccion base y el comienzo del programa, nosotros no modificamos esta direccion
+		mov		R1, #0       ; Este es el indice (offset)
+		mov		R2, #250	   ; Este es el contador y le asignamos 250 porque es la cantidad de elementos de la tabla
+		;		La inicializacion de R3 no es necesaria
+		
+loop
+		LDRB		R4, [R0, R1]      ; En el registro R4 agregamos los elementos de la tabla que esta en R0 y guarda el indice que le corresponde a cada elemento
+		CMP		R4, #42		   ; Compara un elemento de la tabla con el numero 42 y asi con los siguientes
+		BEQ		listo              ; En el caso de que haya encontrado el 42, saltamos a la direccion "listo"
+		ADD		R1, R1, #1         ; En el caso de que no lo encuentre en la posicion donde se encuentra, se incrementa el indice en 1
+		SUBS		R2, R2, #1        ; Y decrementamos el contador, aca si ponemos la S porque necesitamos activar la bandera del carry para saber si termino bien o si tiene que volver al loop, pero arriba no lo ponemos porque solo necesitamos el valor de R1 y no controlamos nada
+		BNE		loop               ; Si el contador no llego a 0, repite el loop, en donde el R1 va a estar incrementado en una posicion y accedemos el siguiente lugar en la tabla haciendo los pasos nuevamente
+		
+listo
+		CMP		R2, #0             ; Comparamos si R2 con 0
+		MOVEQ	R3, #-1          ; Entonces hacemos una transferencia con un condicional en donde si R2 es igual a 0, significa que no se encontro el 42 y retorna -1
+		MOVNE	R3, R1		   ; En caso de que R2 no sea igual a 0, copiamos el valor de R1 que es la posicion del 42 en la tabla, en el registro R3.
+		
+tabla	DCB		1,2,3,42,5,6,7,8,9,10    ; La tabla de datos va a tener una direccion simbolica dada por la etiqueta "tabla", y con DCB indicamos que el dato que se va a guardar son bytes
+		;		y le asignamos los datos que va a tener la tabla
+		FILL		240					; Fill significa llenar o completa con 0 la cantidad de veces que digamos, por ende, como son 250 bytes, tenemos los 10 anteriores y completamos el resto con 240 ceros
+		;		Hacemos esto para no cargar 250 valores distintos. Estas dos son sentencias directivas

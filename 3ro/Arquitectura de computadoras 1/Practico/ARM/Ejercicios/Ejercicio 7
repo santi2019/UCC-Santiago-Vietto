@@ -1,0 +1,31 @@
+		;		Suponga que las direcciones base de array1 y array2 se mantienen en R1 y R2 y que array2 se inicializa antes de usarse.
+		;
+		;		int i;
+		;		int array1[100];
+		;		int array2[100];
+		;		...
+		;		for (i=0; i<100; i=i+1)
+		;		array1[i] = array2[i];
+		
+		
+		
+		mov		R1, #array1    ; Direccion base array1
+		mov		R2, #array2    ; Direccion base array2
+		mov		R3, #0	    ; Lo usamos para manejar los indices de los arreglos, y como contador, es decir, como variable i
+		
+loop				      ; Ingresamos al loop
+		LDR		R4, [R2, R3]	 ; Cargamos en el registro R4 el contenido que hay en el array2 junto con el indice en R3 que se va sumando uno a uno y que le corresponde a cada numero
+		STR		R4, [R1, R3]	 ; Los valores que tenemos en R4 los almacenamos en R1, teniendo en cuenta los valores de posicion que indica R3 que es el mismo que el anterior
+		ADD		R3, R3, #4	 ; Al registro R3 le sumo el valor que ya tenemos en R3 y le agregamos 4 porque va de a palabras
+		CMP		R3, #400		 ; Comparamos el valor de R3 con 400 que es la ultima posicion
+		BNE		loop			 ; Entonces en el caso de que R3 no sea 400 vuelve al loop
+		
+		;Primero	creamos los arreglos que son de 100 palabras:
+array1	FILL		400					; Creamos uno de 400 bytes que esta vacio de numeros pero reservamos en la memoria mediante 0's
+array2	DCD		1,2,3,4,5,6,7,8,9,10		; Creamos otro en donde llenamos las primeas 10 posiciones ya que array2 es el que esta inicializado
+		FILL		360					; y al resto lo llenamos con 0's
+
+
+; Como estamos trabajando con DCD que significa word que son 4 bytes, en los arreglos tenemos que llenar con multiplos de 4, en donde si
+; en el arreglo2 tenemos ingresados 10 elementos, estos serian 40, y para llegar a los 100, tenemos que colocar 90 en el 
+; fill y multiplicarlo por 4 dando 360. Por ende en el arreglo1 si necesitamos 100 palabras entonces ponemos 400.

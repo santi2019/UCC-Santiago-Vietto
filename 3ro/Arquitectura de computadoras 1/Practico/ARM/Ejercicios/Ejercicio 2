@@ -1,0 +1,25 @@
+		;		Diseñe un algoritmo para contar el número de 1's presentes en el registro R1. Implemente su algoritmo usando el lenguaje Assembly del ARM.
+		
+		;		mov		r1, #0b001111100 ; Ingreso un numero para verificar la cantidad de 1's
+		;		mov		r3, #1 ; MASCARA
+		;		mov		r9, #32 ; Contador de iteraciones
+		;		mov		r10, #0 ; Contador de 1's
+		
+		;loop
+		;		tst		r3,r1
+		;		addne	r10,r10,#1
+		;		add		r3,r3,r3 ; Corro la mascara a la izquierda
+		;		SUBS		r9,r9,#1
+		;		bne		loop ; Si r9 = 0, termina el bucle
+		
+		
+		
+		mov		R1, #0b000  ; Asigno un valor
+		mov		R3, R1		  ; Guardo el valor de R1 en R3 para no perderlo, y trabajamos con este ultimo.
+		mov		R2, #0		  ; Asignamos 0 al contador
+		
+loop					  ; Comienza la iteracion
+		movs		R3, R3, LSR #1	  ; Nos llevamos el numero al carry, y analiza uno por uno los elementos del numero que esta en R3 mientras se desplaza a la derecha o a la izquierda que es lo mismo
+		;		Ademas se establese la flag del carry porque se coloco la S.
+		ADDCS	R2, R2, #1	  ; Sumamos 1 en R2 si el carry es igual a 1. La suma es condicional al carry
+		BNE		loop			  ; Finaliza el loop cuando la flag Z este en 1, o sea cuando el numero que desplzaamos llegue a cero

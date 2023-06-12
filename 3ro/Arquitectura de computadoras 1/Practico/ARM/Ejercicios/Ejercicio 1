@@ -1,0 +1,23 @@
+; Traduzca el siguiente codigo de alto  nivel al lenguaje ensamblador ARM:
+;
+; a=b-c
+; f=(g+h)-(i+j)
+; K=K+8
+
+
+
+; R0=a, R1=b, R2=c, R3=f, R4=g, R5=h, R6=i, R7=j, R10=k
+; R8 y R9 intermedios o auxiliares
+	
+	mov		r1, #4
+	mov		r2, #1
+	mov		r4, #3
+	mov		r5, #3
+	mov		r6, #2
+	mov		r7, #2
+	
+	sub		R0,R1,R2
+	add		R8,R4,R5
+	add		R9,R6,R7
+	sub		R3,R8,R9
+	add		R10,R10,#8

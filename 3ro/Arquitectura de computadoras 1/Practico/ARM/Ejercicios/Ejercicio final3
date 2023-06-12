@@ -1,0 +1,22 @@
+		mov		R0, #tabla1
+		mov		R1, #0
+		mov		R2, #0
+		mov		R3, #tabla2
+		mov		R8, #42
+		mov		R9, #0
+		
+loop
+		LDRB		R4, [R0, R2]
+		CMP		R4, #0x80
+		ADDGT	R1, R1, #1
+		ADDS		R2, R2, #1
+		CMP		R2, #16
+		BNE		loop
+		
+		CMP		R1, #5
+		STRBGT	R8, [R3]
+		STRBLE	R9, [R3]
+		
+tabla1	DCB		150, 130, 131, 132, 133, 132, 12, 2, 34, 56, 12, 43, 54, 6, 34, 22
+tabla2	FILL		200
+		

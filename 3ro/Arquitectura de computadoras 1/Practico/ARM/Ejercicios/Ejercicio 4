@@ -1,0 +1,16 @@
+; Considere el siguiente fragmento de código de alto nivel. Suponga que las variables enteras (con signo) g y h están en los registros R0 y R1,
+; respectivamente. Escriba un fragmento de código en lenguaje Assembly del ARM con ejecución condicional disponible para todas las instrucciones.
+; Use la menor cantidad de instrucciones posible.
+;
+;	if (g >= h)
+;	   g = g + h;
+;	else
+;	   g = g - h;
+		
+		
+	mov		R0, #0xD
+	mov		R1, #0X2
+		
+	CMP		R0, R1
+	ADDGE	R0, R0, R1
+	SUBLT	R0, R0, R1
