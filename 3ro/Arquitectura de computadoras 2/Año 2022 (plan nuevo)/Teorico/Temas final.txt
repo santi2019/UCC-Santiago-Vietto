@@ -1,0 +1,12 @@
+SEGUNDA MESA FEBRERO 2023
+
+Pasar codigo c a assembly muy similar al ultimo del primer practico asi con el define si lo ves lo entendes
+
+Mapa de memoria muy facil decir si genera posiciones imagen, y luego te pide colocar otra memoria con dos chips y un decodificador.
+
+Cache facil pero tenes que saber bien por que despues preguntaba cosas que nunca vimos como cuantos bits hay en dos bloqué de una cache de dos vias contar bits de tag validación y datos cosas así
+
+Detectar dependencias de datos y ver cuales geenera hazard estructural en un micro que no puede hacer operaciones en simultaneo en el register file es decir que no pueden coincidir el ID con el W
+
+TEORICO --> 	Jerarquia de memorias y principio de localidad, y al otro le tomo hazards
+ 		(hacerle todos los dibujos) // ver resumen Riveros
