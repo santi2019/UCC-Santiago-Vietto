@@ -1,0 +1,1 @@
+Clave Wifi de mi pc: netsh WLAN show profile name="..." key=clear (nombre del wifi)
