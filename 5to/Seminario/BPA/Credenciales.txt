@@ -1,0 +1,16 @@
+Designer o Dashboard
+
+user: admin
+password: admin123
+
+
+Iniciador
+
+user: santiviettoiniciador
+password: luciano123
+
+
+Gerente
+
+user: santivgerente
+password: santi123
