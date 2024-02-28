@@ -1,0 +1,17 @@
+
+Practico:
+1. Explicar que trabajo hiciste (mostrar corriendo en Gcloud).
+2. Explicar test unitarios y probarlos tanto en el codigo local como en el pipeline de GitHub Actions.
+3. Modificar los test unitarios para hacerlos fallar en el codigo.
+4. Hacer commit de los test unitarios fallidos para hacer fallar el pipeline de GitHub Actions y verificar
+si se hace el deploy (no deberia debido al proceso de CI/CD, es decir, deben correr bien los tests unitarios
+para que recien se ejecute el pipeline del deploy - modificar el pipeline porque a mi me corrio igual por mas
+que fallara el pipeline del Unit Test).
+
+Teorico:
+1. Estructura de git (Commit, Tree, Blob) y las ventajas de esto.
+2. Concepto de Mock en los test unitarios.
+3. Entender el concepto de Continuos Integration (CI), Continuos Delivery, Continuos Deployment (CD), y como se
+relacionan estos a traves de las etapas (Estudiar el diagrama de la filmina/apunte).
+ 
+
